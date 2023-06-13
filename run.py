@@ -43,6 +43,57 @@ def welcome():
             return player
 
 
+# Displays different images, every time the player picks the wrong letter
+def display_hangman(tries):
+    """
+    Function that visually shows each incorrect try
+    the player makes in the game
+    """
+    stages = ["""
+               +---+
+               o   |
+              /|\  |
+              / \  |
+                  ===""",
+              """
+               +---+
+               o   |
+              /|\  |
+              /    |
+                  ===""",
+              """
+               +---+
+               o   |
+              /|\  |
+                   |
+                  ===""",
+              """
+               +---+
+               o   |
+              /|   |
+                   |
+                  ===""",
+              """
+               +---+
+               o   |
+               |   |
+                   |
+                  ===""",
+              """
+               +---+
+               o   |
+                   |
+                   |
+                  ===""",
+              """
+               +---+
+                   |
+                   |
+                   |
+                  ==="""]
+    return stages[tries]
+
+
 # Loads the terminal and starts the gmae
 def main():
     """
