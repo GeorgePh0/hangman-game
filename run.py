@@ -43,6 +43,20 @@ def welcome():
             return player
 
 
+# Start the game
+def start_game(word):
+    """
+    Function to start the game
+    """
+    # Define variables
+    word_answer = "_ " * len(word)
+    letter_guessed = []
+    guessed = False
+    tries = 6
+    print(display_hangman(tries))  # prints the hangman images
+    print(word_answer)
+
+
 # Displays different images, every time the player picks the wrong letter
 def display_hangman(tries):
     """
@@ -101,6 +115,7 @@ def main():
     """
     word = grab_word()
     welcome()
+    start_game(word)
 
 
 if __name__ == "__main__":
