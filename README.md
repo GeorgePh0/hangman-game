@@ -68,7 +68,17 @@ Below is a flowchart of the game. This is the initial idea for what I want the g
 
 ### Bugs
 
+**Solved Bugs**
+    - I had used isalpha() to make people use letters only.
+    - If the player gets the word correct, they would still have to keep going until they run out of tries and then be told they lost. 
+    I had fixed this by adding an if statement and telling it if it got the letter correct and there is no more words to guess, then change guessed to True.
+
+**Unfixed Bugs**
+    - there is no bugs remaining
+
 ### Validator Testing
+
+![Validation](assets/readme-images/validation.jpg)
 
 ## **Deployment**
 
