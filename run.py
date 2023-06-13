@@ -55,6 +55,24 @@ def start_game(word):
     tries = 6
     print(display_hangman(tries))  # prints the hangman images
     print(word_answer)
+    # player hasn't discovered the word and still has tries left to guess
+    while guessed is False and tries > 0:
+        guess = input("Select a letter: ").upper()
+        # Can only try one letter at a time
+        if len(guess) == 1 and guess.isalpha():
+            if guess in letter_guessed:
+                print("%s has already been used." % guess)
+            elif guess not in word:
+                print("%s is not in the word." % guess)
+                letter_guessed.append(guess)
+                tries -= 1
+                print(display_hangman(tries))
+            elif guess in word:
+                print("Good Job!", guess, "is in the word")
+                letter_guessed.append(guess)
+                print(display_hangman(tries))
+            else:
+                print("Invalid. Please choose a letter.")
 
 
 # Displays different images, every time the player picks the wrong letter
