@@ -43,6 +43,18 @@ def welcome():
             return player
 
 
+def replay():
+    """
+    Function to replay the game
+    """
+    restart = input("would you like to play again! Enter Y or N \n")
+    if restart == "y":
+        clear_console()
+        main()
+    else:
+        print("Thanks for playing!")
+
+
 # Start the game
 def start_game(word):
     """
@@ -88,6 +100,7 @@ def start_game(word):
         if current == word:
             guessed = True
             print("Well Done!!!")
+            replay()
         elif tries == 0:
             print(display_hangman(tries))
             print(word)
