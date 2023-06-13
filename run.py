@@ -73,6 +73,26 @@ def start_game(word):
                 print(display_hangman(tries))
             else:
                 print("Invalid. Please choose a letter.")
+        else:
+            print("Not a valid guess. Please choose a letter.")
+    # print the letter if it is in the word
+        current = ""
+        if guessed is False:
+            for letter in word:
+                if letter in letter_guessed:
+                    current += letter
+                else:
+                    current += "_ "
+            print(current)
+    # word is completed
+        if current == word:
+            guessed = True
+            print("Well Done!!!")
+        elif tries == 0:
+            print(display_hangman(tries))
+            print(word)
+            print("")
+            print("Oh No! Better luck next time")
 
 
 # Displays different images, every time the player picks the wrong letter
