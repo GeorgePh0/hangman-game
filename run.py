@@ -74,12 +74,15 @@ def start_game(word):
         if len(guess) == 1 and guess.isalpha():
             if guess in letter_guessed:
                 print("%s has already been used." % guess)
+                print(display_hangman(tries))
             elif guess not in word:
+                clear_console()
                 print("%s is not in the word." % guess)
                 letter_guessed.append(guess)
                 tries -= 1
                 print(display_hangman(tries))
             elif guess in word:
+                clear_console()
                 print("Good Job!", guess, "is in the word")
                 letter_guessed.append(guess)
                 print(display_hangman(tries))
@@ -102,10 +105,12 @@ def start_game(word):
             print("Well Done!!!")
             replay()
         elif tries == 0:
+            clear_console()
             print(display_hangman(tries))
             print(word)
             print("")
-            print("Oh No! Better luck next time")
+            print("Oh No! Better luck next time \n")
+            replay()
 
 
 # Displays different images, every time the player picks the wrong letter
