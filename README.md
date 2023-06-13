@@ -1,32 +1,38 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Hangman Game**
 
-Welcome,
+This hangman game was written in Python and played on a terminal based window.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+![Am I responsive](assets/readme-images/am-i-responsive.jpg)
 
-## Reminders
+This game of hangman is based around football teams in the UK. It is a standard based hangman game, meaning you have six lives to get the word correct.
+The word has been randomised from the words.py file
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## **Table of Contents**
 
-## Creating the Heroku app
+- [How to Play](#how-to-play)
+- [Features](#features)
+    - [Existing Features](#existing-features)
+    - [Future Features](#future-features)
+- [Testing](#testing)
+    - [Bugs](#bugs)
+    - [Validator Testing](#vaidation)
+- [Deployment](#deployment)
+- [Credit](#credit)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## **How to Play**
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## **Features**
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Existing Features
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Future Features
 
-Connect your GitHub repository and deploy as normal.
+## **Testing**
 
-## Constraints
+### Bugs
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+### Validator Testing
 
----
+## **Deployment**
 
-Happy coding!
+## **Credit**
