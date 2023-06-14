@@ -39,7 +39,7 @@ def welcome():
             continue
         else:
             print("\n")
-            print(f'Hi {player}, welcome and also GOOD LUCK.')
+            print(f'Hi {player}, welcome to hangman. Good Luck')
             return player
 
 
@@ -69,7 +69,7 @@ def start_game(word):
     print(word_answer)
     # player hasn't discovered the word and still has tries left to guess
     while guessed is False and tries > 0:
-        guess = input("Select a letter: ").upper()
+        guess = input("Choose a letter: ").upper()
         # Can only try one letter at a time
         if len(guess) == 1 and guess.isalpha():
             if guess in letter_guessed:
